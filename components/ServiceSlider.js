@@ -1,12 +1,11 @@
-// import swiper react components
+// Импорт компонентов Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// import swiper styles
+// Импорт стилей Swiper
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
-// icons
+// Импорт иконок
 import {
   RxCrop,
   RxDesktop,
@@ -16,35 +15,32 @@ import {
   RxArrowTopRight,
 } from 'react-icons/rx';
 
-// import required modules
+// Импорт модулей Swiper
 import { FreeMode, Pagination } from 'swiper';
 
-// service data
+// Данные для сервиса
 export const serviceData = [
   {
-    icon: <RxCrop />,
-    title: 'Branding',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: '/photo1.jpg', // Путь к изображению в папке public
+    title: 'Witold Bednarski (dz. Bezpieczeństwa)',
   },
   {
-    icon: <RxPencil2 />,
-    title: 'Design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: '/photo2.jpg', // Путь к изображению в папке public
+    title: 'Witold Nowak (Radca prawny)',
   },
   {
-    icon: <RxDesktop />,
-    title: 'Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: '/photo3.jpg', // Путь к изображению в папке public
+    title: 'Damian Grabowski (Radca prawny)',
   },
   {
-    icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: '/photo5.jpg', // Путь к изображению в папке public
+    title: 'Marek Bednarski ( ekspert ds. systemów informatycznych )',
+    
   },
   {
-    icon: <RxRocket />,
-    title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: '/photo6.jpg', // Путь к изображению в папке public
+    title: 'Kazimierz Szymaniec ( Radca prawny )',
+    
   },
 ];
 
@@ -56,7 +52,6 @@ const ServiceSlider = () => {
           slidesPerView: 1,
           spaceBetween: 15,
         },
-
         640: {
           slidesPerView: 3,
           spaceBetween: 15,
@@ -67,29 +62,31 @@ const ServiceSlider = () => {
         clickable: true,
       }}
       modules={[FreeMode, Pagination]}
-      className='h-[240px] sm:h-[340px]'
+      className="h-[240px] sm:h-[340px]"
     >
-      {serviceData.map((item, index) => {
-        return (
-          <SwiperSlide key={index}>
-            <div className='bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300'>
-              {/* icon */}
-              <div className='text-4xl text-accent mb-4'>{item.icon}</div>
-              {/* title & desc */}
-              <div className='mb-8'>
-                <div className='mb-2 text-lg'>{item.title}</div>
-                <p className='max-w-[350px] leading-normal'>
-                  {item.description}
-                </p>
-              </div>
-              {/* arrow */}
-              <div className='text-3xl'>
-                <RxArrowTopRight className='group-hover:rotate-45 group-hover:text-accent transition-all duration-300' />
-              </div>
+      {serviceData.map((item, index) => (
+        <SwiperSlide key={index}>
+          <div className="bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300">
+            {/* Проверка и вывод фото или иконки */}
+            <div className="text-4xl text-accent mb-4">
+              {item.image ? (
+                <img src={item.image} alt={item.title} className="w-35 h-40 rounded-full object-cover" />
+              ) : (
+                item.icon
+              )}
             </div>
-          </SwiperSlide>
-        );
-      })}
+            {/* Заголовок и описание */}
+            <div className="mb-8">
+              <div className="mb-2 text-lg">{item.title}</div>
+              <p className="max-w-[350px] leading-normal">{item.description}</p>
+            </div>
+            {/* Стрелка */}
+            <div className="text-3xl">
+              <RxArrowTopRight className="group-hover:rotate-45 group-hover:text-accent transition-all duration-300" />
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

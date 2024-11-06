@@ -8,16 +8,18 @@
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
-  background-color: #f13024;
+  background-color: #24f124;
 }
 
 .swiper-button-next:after,
 .swiper-button-prev:after,
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
-  color: #f13024;
+  color: #24f124;
 }
-
+.text-accent {
+  color: #FFD700; /* Яркий золотой оттенок */
+}
 @layer base {
   body {
     @apply overflow-hidden leading-relaxed;

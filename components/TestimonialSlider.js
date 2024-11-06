@@ -1,25 +1,53 @@
 // testimonial slider data
 export const testimonialSlider = [
   {
-    image: '/t-avt-1.png',
-    name: 'Anne Smith',
+    image: '/t-avt-4.png',
+    name: 'Dorota',
     position: 'Customer',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'Jestem bardzo zadowolona z usług Pana Michała.Jest osobą kompetentną,pomocną i zaangażowaną w sprawę ,którą prowadzi.Na bieżąco byłam informowana co dzieje się w sprawie.',
   },
   {
-    image: '/t-avt-2.png',
-    name: 'Jane Doe',
+    image: '/t-avt-8.png',
+    name: 'Wojtek',
     position: 'Customer',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'Konkretny,pomocny i zaangażowany w sprawę którą prowadzi.Zawsze w kontakcie z klientem.Wysoka kultura osobista, miła obsługa i skuteczność w działaniu.Polecam ',
   },
   {
-    image: '/t-avt-3.png',
-    name: 'Jhon Doe',
+    image: '/t-avt-5.png',
+    name: 'Alicja',
     position: 'Customer',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'Bardzo dobry i pomocny prawnik.Potrafi pomóc w sprawach skomplikowanych,zawsze w kontakcie z klientem.Polecam tym wszystkim,którzy cenią sobie fachowość i miłą obsługę. ',
+  },
+  {
+    image: '/t-avt-6.png',
+    name: 'Iwona Stępnikowska',
+    position: 'Customer',
+    message:
+      'Ogrom wiedzy, skrupulatność, po 15 minutach rozmowy, zdobył moje zaufanie. Polecam. Gdybym mogła to bym zatrudniła do sprawy ale niestety nie mam funduszy na następnego prawnika. Bardzo polecam. ',
+  },
+  {
+    image: '/t-avt-9.png',
+    name: 'Adam',
+    position: 'Customer',
+    message:
+      'Pan Marek jest osobą kompetentną i zaangażowaną w sprawę którą prowadzi.Potrafi pomóc w sprawach trudnych i skomplikowanych,bardzo pomocny. ',
+  },
+  {
+    image: '/t-avt-10.png',
+    name: 'Kamil',
+    position: 'Customer',
+    message:
+      'Pomocny , konkretny i zaangażowany w sprawę, którą prowadzi.Wszystko na bieżąco wyjaśnione w sposób zrozumiały dla kilenta.Wysoka kultura osobista i miła obsługa.  ',
+  },
+  {
+    image: '/t-avt-7.png',
+    name: 'Grażyna',
+    position: 'Customer',
+    message:
+      'Pan mecenas jest bardzo zaangażowany i zainteresowany problemem klienta oraz szukaniem najlepszego rozwiązania.Konkretny,cierpliwy, skuteczny i zawsze w kontakcie.Polecam jego usługi wszystkim,którzy cenią sobie fachowość i miłą atmosferę. . ',
   },
 ];
 

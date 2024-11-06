@@ -24,7 +24,7 @@ const Contact = () => {
             exit='hidden'
             className='h2 text-center mb-12'
           >
-            Let's <span className='text-accent'>connect.</span>
+            Skontaktuj się z <span className='text-accent'>nami.</span>
           </motion.h2>
           {/* form */}
           <motion.form
@@ -36,11 +36,21 @@ const Contact = () => {
           >
             {/* input group */}
             <div className='flex gap-x-6 w-full'>
-              <input type='text' placeholder='name' className='input' />
-              <input type='text' placeholder='email' className='input' />
+              <input type='text' placeholder='Imję Nazwisko' className='input' />
+              <input type='email' placeholder='email' className='input' />
             </div>
             <input type='text' placeholder='subject' className='input' />
-            <textarea placeholder='message' className='textarea'></textarea>
+
+            {/* phone number input */}
+            <input
+              type='tel'
+              placeholder='Telefon (+48...)'
+              className='input'
+              pattern='^(\+48)?[0-9]{9}$' // Ensures +48 followed by 9 digits or just 9 digits
+              title='Please enter a valid phone number starting with +48, followed by 9 digits'
+            />
+
+            <textarea placeholder='Opisz krótko sytuację' className='textarea'></textarea>
             <button className='btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group'>
               <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500'>
                 Let's talk

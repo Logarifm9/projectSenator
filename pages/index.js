@@ -4,7 +4,6 @@ import Image from 'next/image';
 // components
 import ParticlesContainer from '../components/ParticlesContainer';
 import ProjectsBtn from '../components/ProjectsBtn';
-import Avatar from '../components/Avatar';
 
 // framer motion
 import { motion } from 'framer-motion';
@@ -26,9 +25,10 @@ const Home = () => {
             exit='hidden'
             className='h1'
           >
-            Transforming Ideas <br /> Into{' '}
-            <span className='text-accent'>Digital Reality</span>
+            Kancelaria Ochrony  <br /> {' '}
+            <span style={{ color: '#E5B900' }}>Prawnej w Sieci</span>
           </motion.h1>
+          
           {/* subtitle */}
           <motion.p
             variants={fadeIn('down', 0.3)}
@@ -37,10 +37,25 @@ const Home = () => {
             exit='hidden'
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-            nostrum quam reprehenderit vero, tenetur voluptatem nulla aut
-            aspernatur dolores ut.
+            Skorzystaj z usług Kancelarii Prawnej Ochrony Prawnej w Sieci  – Twoich ekspertów w walce z oszustwami internetowymi. 
+            Oferujemy pełne wsparcie prawne w zakresie zwalczania cyberprzestępczości, zapewniając pomoc ze strony doświadczonych prawników, detektywów oraz specjalistów w dziedzinie bezpieczeństwa cyfrowego. 
+            Nasza kancelaria dostarcza kompleksowe rozwiązania prawne, które skutecznie chronią przed oszustwami online i innymi zagrożeniami w sieci. Jeśli potrzebujesz pomocy, skontaktuj się z nami za pomocą formularza kontaktowego lub zadzwoń pod numer.
           </motion.p>
+          
+          {/* address */}
+          <motion.div
+            variants={fadeIn('down', 0.5)}
+            initial='hidden'
+            animate='show'
+            exit='hidden'
+            className=' mt-12 text-sm xl:text-base'
+            style={{ marginTop: '50px', color: '#E5B900' }}
+          >
+             <p>Ul. Twarda 18, 8 piętro, 00-824, Warszawa</p>
+             <p>City Tower Nusle, 140 00 Praha 4, Czechia</p>
+          </motion.div>
+
+
           {/* btn */}
           <div className='flex justify-center xl:hidden relative'>
             <ProjectsBtn />
@@ -56,6 +71,7 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
+
       {/* image */}
       <div className='w-[1200px] h-full absolute right-0 bottom-0'>
         {/* bg img */}
@@ -71,7 +87,7 @@ const Home = () => {
           transition={{ duration: 1, ease: 'easeInOut' }}
           className='w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]'
         >
-          <Avatar />
+          
         </motion.div>
       </div>
     </div>
