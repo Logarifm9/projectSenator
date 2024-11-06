@@ -53,6 +53,7 @@ const Home = () => {
           >
              <p>Ul. Twarda 18, 8 piętro, 00-824, Warszawa</p>
              <p>City Tower Nusle, 140 00 Praha 4, Czechia</p>
+             <p>+48 732 082 166</p>
           </motion.div>
 
 

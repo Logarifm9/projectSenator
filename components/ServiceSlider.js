@@ -15,7 +15,8 @@ import {
   RxArrowTopRight,
 } from 'react-icons/rx';
 
-// Импорт модулей Swiper
+// Импорт компонента Image и модулей Swiper
+import Image from 'next/image';
 import { FreeMode, Pagination } from 'swiper';
 
 // Данные для сервиса
@@ -34,13 +35,11 @@ export const serviceData = [
   },
   {
     image: '/photo5.jpg', // Путь к изображению в папке public
-    title: 'Marek Bednarski ( ekspert ds. systemów informatycznych )',
-    
+    title: 'Marek Bednarski (ekspert ds. systemów informatycznych)',
   },
   {
     image: '/photo6.jpg', // Путь к изображению в папке public
-    title: 'Kazimierz Szymaniec ( Radca prawny )',
-    
+    title: 'Kazimierz Szymaniec (Radca prawny)',
   },
 ];
 
@@ -70,16 +69,13 @@ const ServiceSlider = () => {
             {/* Проверка и вывод фото или иконки */}
             <div className="text-4xl text-accent mb-4">
               {item.image ? (
-                <img src={item.image} alt={item.title} className="w-35 h-40 rounded-full object-cover" />
+                <Image src={item.image} alt={item.title} width={140} height={160} className="rounded-full object-cover" />
               ) : (
                 item.icon
               )}
             </div>
-            {/* Заголовок и описание */}
-            <div className="mb-8">
-              <div className="mb-2 text-lg">{item.title}</div>
-              <p className="max-w-[350px] leading-normal">{item.description}</p>
-            </div>
+            {/* Заголовок */}
+            <div className="text-lg mb-8">{item.title}</div>
             {/* Стрелка */}
             <div className="text-3xl">
               <RxArrowTopRight className="group-hover:rotate-45 group-hover:text-accent transition-all duration-300" />
