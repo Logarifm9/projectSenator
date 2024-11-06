@@ -9,7 +9,7 @@ import { fadeIn } from '../../variants';
 
 const Services = () => {
   return (
-    <div className='h-full bg-primary/30 py-36 flex items-center'>
+    <div className='h-full bg-primary/30 py-12 sm:py-24 lg:py-36 flex items-center'>
       <Circles />
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-x-8'>
@@ -20,7 +20,7 @@ const Services = () => {
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='h2 xl:mt-8'
+              className='h2 xl:mt-8 text-xl sm:text-2xl md:text-3xl lg:text-4xl'
             >
               Nasz zespół <span className='text-accent'>.</span>
             </motion.h2>
@@ -29,7 +29,7 @@ const Services = () => {
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='mb-4 max-w-[400px] mx-auto lg:mx-0'
+              className='mb-4 max-w-[350px] sm:max-w-[400px] mx-auto lg:mx-0 text-sm sm:text-base md:text-lg lg:text-xl'
             >
               Zespół Kancelarii Ochrony Prawnej w Sieci
               to grupa doświadczonych prawników, specjalistów ds. bezpieczeństwa cyfrowego oraz detektywów, którzy łączą wiedzę prawniczą z zaawansowaną ekspertyzą w obszarze cyberprzestępczości. Każdy członek naszego zespołu posiada specjalistyczną wiedzę z zakresu prawa internetowego, ochrony danych osobowych oraz zwalczania oszustw internetowych, co pozwala nam skutecznie rozwiązywać nawet najbardziej skomplikowane sprawy.

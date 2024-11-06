@@ -58,7 +58,7 @@ import CountUp from 'react-countup';
 
 const About = () => {
   const [index, setIndex] = useState(0);
-  console.log(index);
+
   return (
     <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
       <Circles />
@@ -79,7 +79,7 @@ const About = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='h2'
+            className='h2 text-lg sm:text-xl md:text-2xl xl:text-4xl' // Уменьшаем текст на мобильных устройствах
           >
             O <span className='text-accent'>nas</span> i naszych usługach
           </motion.h2>
@@ -88,7 +88,7 @@ const About = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
+            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-sm md:text-base xl:text-lg' // Меньший текст для мобильных
           >
             Z wieloletnim doświadczeniem i dogłębną znajomością skomplikowanych przepisów prawnych, nasza Kancelaria specjalizuje się w sprawach związanych z oszustwami internetowymi, w tym oszustwami giełdowymi, zwłaszcza na rynku Forex. 
             Dotychczas prowadziliśmy setki spraw dotyczących nieuczciwych praktyk na rynkach inwestycyjnych, a każdy klient traktowany jest przez nas indywidualnie, z uwzględnieniem jego specyficznych potrzeb i sytuacji. 
@@ -149,7 +149,7 @@ const About = () => {
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='flex flex-col w-full xl:max-w-[48%] h-[480px]'
+          className='flex flex-col w-full xl:max-w-[48%] h-[480px] overflow-auto' // Добавляем прокрутку
         >
           <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
             {aboutData.map((item, itemIndex) => (

@@ -15,14 +15,14 @@ const Home = () => {
     <div className='bg-primary/60 h-full'>
       {/* text */}
       <div className='w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10'>
-        <div className='text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto'> {/* Удален отступ xl:ml-[10px] */}
+        <div className='text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto overflow-auto'>
           {/* title */}
           <motion.h1
             variants={fadeIn('down', 0.2)}
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='text-lg xl:text-xl'
+            className='text-lg md:text-xl xl:text-3xl'  // Уменьшаем размер текста на мобильных
           >
             Kancelaria Ochrony  <br /> {' '}
             <span style={{ color: '#E5B900' }}>Prawnej w Sieci</span>
@@ -34,7 +34,7 @@ const Home = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
+            className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-sm md:text-base xl:text-lg'  // Уменьшаем текст на мобильных
           >
             Skorzystaj z usług Kancelarii Prawnej Ochrony Prawnej w Sieci – Twoich ekspertów w walce z oszustwami internetowymi. 
             Oferujemy pełne wsparcie prawne w zakresie zwalczania cyberprzestępczości, zapewniając pomoc ze strony doświadczonych prawników, detektywów oraz specjalistów w dziedzinie bezpieczeństwa cyfrowego. 
@@ -47,7 +47,7 @@ const Home = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-            className=' mt-12 text-sm xl:text-base'
+            className='mt-12 text-sm xl:text-base text-sm md:text-base xl:text-lg'  // Уменьшаем текст на мобильных
             style={{ marginTop: '1px', color: '#E5B900' }}
           >
             <p>Ul. Twarda 18, 8 piętro, 00-824, Warszawa</p>
